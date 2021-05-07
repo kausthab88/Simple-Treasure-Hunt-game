@@ -1,0 +1,50 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+
+
+direction = input('You\'re at a Crossroad. Do you want to go "left" or "right"? ')
+direction = direction.lower()
+
+if direction == "left":
+  print("\nYou reached a lake. There is an island in the middle of it.")
+  action = input('Do you want to swim or wait for a boat? Type "swim" or "wait": ')
+  action = action.lower()
+  if action == "wait":
+    print("A boat is here to take you to an island.\n")
+    door = input('You\'ve arrived at a house and the house has 3 doors: Red,Yellow & Blue.\n Which one will you open? Type "red","blue" or "yellow": ')
+    door = door.lower()
+    if door == "yellow":
+      print("Congratulations!! You found the Treasure!! YOU WIN...")
+    elif door == "red":
+      print("Burned by Fire. GAME OVER!!")
+    elif door == "blue":
+      print("Eaten by Beasts!! GAME OVER!!!")
+    else:
+      print("GAME OVER!!")
+  else:
+    print("Attacked by a Trout. GAME OVER!!")
+else:
+  print("You fell into a HOLE. GAME OVER!!")
